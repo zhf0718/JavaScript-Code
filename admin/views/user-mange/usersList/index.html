@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页</title>
+    <link rel="stylesheet" href="/admin/lib/css/bootstrap.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="/admin/lib/js/bootstrap.bundle.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="topbar">
+
+
+        </div>
+        <div class="box">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-3 sidemenu">
+
+
+
+                    </div>
+                    <div class="col-9 content">
+
+                        <div class="maincontainer">
+                            <!--面包屑-->
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item " aria-current="page">用户管理</li>
+                                    <li class="breadcrumb-item active" aria-current="page">用户列表</li>
+                                </ol>
+                            </nav>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">用户名</th>
+                                        <th scope="col">头像</th>
+                                        <th scope="col">操作管理</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="listBody">
+
+
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--modal框-->
+    <div class="modal fade" id="exampleModal-edit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">信息修改</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editUserForm">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">用户名：</label>
+                            <input type="text" class="form-control" id="username" aria-describedby="emailHelp" required>
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">密码：</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="introduction" class="form-label">个人简介</label>
+                            <textarea class="form-control" id="introduction" rows="3"></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="photoFile" class="form-label">选择头像</label>
+                            <input type="file" class="form-control" id="photoFile" required>
+                        </div>
+
+
+                        
+
+                        
+
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" id="editConfirm">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="modal fade" id="exampleModal-del" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">删除用户！</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    您确定要删除吗？
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-danger" id="delConfirm">确认删除</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js" type="module">
+
+    </script>
+</body>
+
+</html>
